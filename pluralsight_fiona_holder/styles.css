@@ -1,0 +1,56 @@
+button:focus {
+  outline: 3px solid red;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main:focus-within {
+  border: 3px solid blue;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skip_button {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: -10000px;
+  display: inline-block;
+  padding: 1rem 1rem;
+  background-color: black;
+  color: white;
+  transition: 1s all ease-in;
+}
+.skip_button:focus {
+  transition: 0.3s all ease;
+  left: 0;
+}
+input {
+  margin: 0 1rem;
+}
+.req {
+  color: red;
+}
+fieldset {
+  margin: 1rem 1rem;
+  border: none;
+}
+legend {
+  text-align: center;
+}
+.contact-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.red-text {
+  color: red;
+}
+.error {
+  border: 3px solid red;
+}

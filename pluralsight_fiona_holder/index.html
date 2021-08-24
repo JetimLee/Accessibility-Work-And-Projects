@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Friendly Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div> <a class="skip_button" href="#form">Skip to form</a>
+            </div>
+            <div class="search-bar"><input type="text" aria-labelledby="btnSearch"><button
+                    id="btnSearch">Search</button></div>
+        </nav>
+    </header>
+    <input type="text" name="" id="my_input">
+    <input type="text" name="" id="otherInput">
+    <button>Press me</button>
+    <main>
+        <div class="form-container">
+            <form id="my-form" action="">
+                <div id="validation-sum" class="validation-summary" role="alert"></div>
+                <div class="contact-details"> <label for="first-name">First Name (required)</label>
+                    <div>
+                        <!--This labeling of what the symbol means is required by WCAG-->
+                        <p>Required fields are indicated with a <span class="red-text">Red * symbol</span></p>
+                    </div>
+                    <input name="first name" type="text" id="first-name" required="true" aria-required="true">
+                    <label for="email">
+                        Email address<span class="req"> * </span>
+                        <input name='email' type="email" id="email" required>
+                    </label>
+                    <label for="phone-number">Phone Number (required): <span class="req"> * </span></label>
+                    <input type="tel" name="" id="phone-number" aria-describedby="tel-input-description">
+                    <span id="tel-input-description">If you provide a mobile number, we'll send you periodic
+                        updates</span>
+                </div>
+                <fieldset>
+                    <legend>Which introductory session would you like to join?</legend>
+                    <input id="rb1" type="radio" name="session">
+                    <label for="rb1">10:00 AM</label>
+                    <input id="rb2" type="radio" name="session">
+                    <label for="rb2">11:00 AM</label>
+                </fieldset>
+                <label for="drop-menu">Select a destination</label>
+                <select name="drop-menu" id="drop-menu">
+                    <optgroup label="USA">
+                        <option value="">New York, New York</option>
+                        <option value="">Denver, Colorado</option>
+                        <option value="">Miami, Florida</option>
+                    </optgroup>
+                    <optgroup label="Israel">
+                        <option value="">Tel-Aviv</option>
+                        <option value="">Eilat</option>
+                    </optgroup>
+                </select>
+                <fieldset>
+                    <legend>Which job do you want?</legend>
+                    <label for="butchery">butcher</label>
+                    <input type="checkbox" name="" id="butchery">
+                    <label for="cashier">cashier</label>
+                    <input type="checkbox" name="" id="cashier">
+                    <label for="web accessibility expert">web accessibility expert</label>
+                    <input type="checkbox" name="" id="web accessibility expert">
+                    <label for="web developer">web developer</label>
+                    <input type="checkbox" name="" id="web developer">
+                </fieldset>
+                <div class="button-container">
+                    <button id="submitBtn" type="submit" aria-label="Submit Form">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="keyboardExercise.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+a [aria-current="page"] {
+  border-bottom: 3px solid lightblue;
+  background-color: red;
+  color: purple;
+}
+a:visited {
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.button {
+  padding: 5rem;
+  color: white;
+  background-color: blue;
+  width: 3rem;
+}

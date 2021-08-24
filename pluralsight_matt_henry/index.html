@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Examples for Web Accessibility - Pluralsight Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <div role="main"></div> is the same as <main></main> -->
+    <!---use semantic section elements-->
+    <!--Article is good for a lot of the same, repeating content - each markup on twitter is an article-->
+    <!--bypass block is an a-tag with an href that references the id of a containing element, you will skip to that content-->
+    <main id='main'>
+        <header>
+            <nav aria-label="top-nav">
+                <ul>
+                    <li> <a href=#main aria-current="page">link 1</a></li>
+                    <li>link 2</li>
+                    <!--good to give a warning before going off the site, can do this with an icon and a good alt text-->
+                    <li>link 3</li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Page title</h1>
+        <a href="#main">Skip to main content</a>
+        <section>
+            <h2>Major section</h2>
+        </section>
+        <section aria-label="section-header">
+            <h2 id="section-header">Major Section</h2>
+            <h3>Sub section</h3>
+            <h4>Sub-section</h4>
+            <!--Aria attributes update the accessibility tree-->
+        </section>
+        <footer>
+            <nav aria-label="bottom-nav">
+                <ul>
+                    <li>link 1</li>
+                    <li>link 2</li>
+                    <li> link 3</li>
+                </ul>
+            </nav>
+            <div tabindex="0" class="button">Submit</div>
+        </footer>
+    </main>
+</body>
+
+</html>
